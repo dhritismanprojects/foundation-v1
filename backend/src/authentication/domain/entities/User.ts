@@ -26,4 +26,22 @@ export class User {
       now,
     );
   }
+
+  static reconstitute(
+    id: string,
+    email: Email,
+    passwordHash: string,
+    emailVerified: boolean,
+    createdAt: Date,
+    updatedAt: Date,
+  ): User {
+    return new User(
+      id,
+      email,
+      passwordHash,
+      emailVerified,
+      createdAt,
+      updatedAt,
+    );
+  }
 }
